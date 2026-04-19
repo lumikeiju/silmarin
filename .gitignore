@@ -1,6 +1,12 @@
+# Project
+silmarin.code-workspace
+local-storage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dev
 .cache/
 .venv/
-local-storage/
-.DS_Store
-silmarin.code-workspace
-*.wip
+site/
