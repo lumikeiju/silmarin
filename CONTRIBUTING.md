@@ -36,16 +36,16 @@ The version number is stored in the `version` field in `zensical.toml`.
 
 Commits follow [Conventional Commits](https://www.conventionalcommits.org/) with scoping:
 
-- `feat(scope): description` - Core features or Docs content
-- `fix(scope): description` - Core patches or Docs corrections
+- `feat: description` - Core features or Docs content
+- `fix: description` - Core patches or Docs corrections
 
 Examples:
 
 ```
-feat(core-plugins): add abbreviations plugin
-feat(docs-accessmap): add user manual page
-fix(core-util): fix nav generator logic
-fix(docs-walksheds): fix typo
+feat: add abbreviations plugin
+feat: add user manual page
+fix: fix nav generator logic
+fix: fix typo
 ```
 
 ### Branch Naming
@@ -57,10 +57,10 @@ Follow GitHub flow with structured branch names:
 **Examples**:
 
 ```
-feat/core-plugins/add-abbreviations-plugin
-feat/docs-accessmap/add-user-manual-page
-fix/core-util/fix-nav-generator-logic
-fix/docs-walksheds/fix-typo
+feat/add-abbreviations-plugin
+feat/add-user-manual-page
+fix/fix-nav-generator-logic
+fix/fix-typo
 ```
 
 ### Pull Request & Release Process
@@ -73,16 +73,6 @@ fix/docs-walksheds/fix-typo
 ## Getting Started (Windows 10/11)
 
 This section of the guide explains how to set up a Windows environment for contributing to Silmärin for the first time.
-
-### Legend
-
-1. Keyboard shortcut to press | Action
-
-    (`Shift`+`C`) | Copy
-
-2. Command to enter into terminal
-
-    [`someCommand --arguments \<path>`]
 
 ### Installation and Setup
 
@@ -158,52 +148,53 @@ For creating screenshots with a consistent style, Firefox DevTools is to be used
 
 3. Add custom device profiles:
     1. Name: `[Screenshot] Web - Portrait`
-        1. Size: `671`x`1196`
+        1. Size: `810`x`1440`
 
         2. Device Pixel Ratio: `1`
 
         3. User Agent String: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0`
 
     2. Name: `[Screenshot] Web - Landscape`
-        1. Size: `1196`x`671`
+        1. Size: `1440`x`810`
 
         2. Device Pixel Ratio: `1`
 
         3. User Agent String: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0`
 
-4. Resulting screenshots will fit exactly within the 2px outside border present in the following screenshot templates:
-    1. [Screenshot (Landscape)](images/templates/screenshot-landscape.png)
+3. It is recommended to remove all embedded metadata, such as with the use of [ExifToolGUI](https://exiftool.org/gui/).
 
-    2. [Screenshot (Portrait)](images/templates/screenshot-portrait.png)
+4. Process screenshots with the `process-screenshot.py` utility to generate themed light/dark variants with borders and drop shadows:
 
-5. It is recommended to remove all embedded metadata, such as with the use of [ExifToolGUI](https://exiftool.org/gui/).
+    ```powershell
+    # Ensure venv is activated first!
+    ..\.venv\Scripts\Activate.ps1
 
-#### Image Annotations
+    # Process a single screenshot
+    python .\utilities\process-screenshot.py docs\resources\images\example\screenshot.png
 
-For creating image annotations with a consistent style, follow these guidelines.
+    # Process all images in a directory
+    python .\utilities\process-screenshot.py docs\resources\images\example\
 
-1. Highlight box
-    2. Use: Indicating an area of focus in an image.
+    # Process recursively with a custom profile
+    python .\utilities\process-screenshot.py docs\resources\images\ --recurse --profile moonlight
 
-    3. Style
-        1. Padding: `2px` distance from highlighted selection
+    # Regenerate existing output files
+    python .\utilities\process-screenshot.py screenshot.png --overwrite
+    ```
 
-        2. Outline
-            1. Width: `1px`
+    The script produces two variants per input image, saved as maximally-compressed lossless PNGs:
+    - `{name}-light.png` — dark border + drop shadow for light theme pages
+    - `{name}-dark.png` — light border + glow for dark theme pages
 
-            2. Color: `#007FFF`
+    Reference them in Markdown with Zensical's theme-switching fragments:
 
-        3. Fill
-            1. Color: `#FF7F00`
+    ```markdown
+    ![Alt text](path/to/image-light.png#only-light)
+    ![Alt text](path/to/image-dark.png#only-dark)
+    ```
 
-            2. Opacity: `0.5`
+    Mode-tagged source files (e.g., `image.light.png`, `image.dark.png`) generate only the matching variant. Run with `--help` for all options including per-variant color/shadow overrides.
 
-    4. Example:
-
-        ![example](example){ loading=lazy }
-
-    5. Naming convention: For images with highlights, append `-h-$highlightedFeature`
-        1. Example: `login.png` → `login-h-forgot-password.png`
 
 #### QR Codes
 
