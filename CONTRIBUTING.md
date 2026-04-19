@@ -30,7 +30,7 @@ Silmärin uses [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH):
     - Core: Minor fixes, fixing typos, completing chores
     - Docs: Small updates, fixing typos, adding images
 
-The version number is stored in the `version` field in `zensical.toml`.
+The version number is stored in the `CHANGELOG.md` file.
 
 ### Conventional Commits
 
