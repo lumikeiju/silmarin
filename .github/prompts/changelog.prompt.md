@@ -6,7 +6,7 @@ description: Generate a changelog entry from recent commits and prepend it to CH
 
 # Generate Changelog Entry
 
-You are generating a new changelog entry for the TCAT Wiki from recent git commit history. This project follows [Conventional Commits](https://www.conventionalcommits.org/) and [Semantic Versioning](https://semver.org/).
+You are generating a new changelog entry for Silmärin from recent git commit history. This project follows [Conventional Commits](https://www.conventionalcommits.org/) and [Semantic Versioning](https://semver.org/).
 
 ## Step 1 — Collect commit history
 
