@@ -20,15 +20,15 @@ This project follows standardized version control conventions:
 
 Silmärin uses [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH):
 
--   **Major (X.0.0)**:
-    -   Core: New major features or upgrades
-    -   Docs: Changes to structure/navigation that break external links
--   **Minor (0.X.0)**:
-    -   Core: Significant changes to core features
-    -   Docs: New documentation or major reworks
--   **Patch (0.0.X)**:
-    -   Core: Minor fixes, fixing typos, completing chores
-    -   Docs: Small updates, fixing typos, adding images
+- **Major (X.0.0)**:
+    - Core: New major features or upgrades
+    - Docs: Changes to structure/navigation that break external links
+- **Minor (0.X.0)**:
+    - Core: Significant changes to core features
+    - Docs: New documentation or major reworks
+- **Patch (0.0.X)**:
+    - Core: Minor fixes, fixing typos, completing chores
+    - Docs: Small updates, fixing typos, adding images
 
 The version number is stored in the `version` field in `zensical.toml`.
 
@@ -36,8 +36,8 @@ The version number is stored in the `version` field in `zensical.toml`.
 
 Commits follow [Conventional Commits](https://www.conventionalcommits.org/) with scoping:
 
--   `feat(scope): description` - Core features or Docs content
--   `fix(scope): description` - Core patches or Docs corrections
+- `feat(scope): description` - Core features or Docs content
+- `fix(scope): description` - Core patches or Docs corrections
 
 Examples:
 
@@ -87,9 +87,7 @@ This section of the guide explains how to set up a Windows environment for contr
 ### Installation and Setup
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/)
-
     1. Install VS Code Extensions
-
         1. [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
         2. [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
@@ -110,7 +108,6 @@ This section of the guide explains how to set up a Windows environment for contr
 3. Install [Python](https://www.python.org/downloads/)
 
 4. Set up Python virtual environment
-
     1. Create the virtual environment
 
         ```powershell
@@ -160,9 +157,7 @@ For creating screenshots with a consistent style, Firefox DevTools is to be used
     (`Ctrl`+`Shift`+`M`)
 
 3. Add custom device profiles:
-
     1. Name: `[Screenshot] Web - Portrait`
-
         1. Size: `671`x`1196`
 
         2. Device Pixel Ratio: `1`
@@ -170,7 +165,6 @@ For creating screenshots with a consistent style, Firefox DevTools is to be used
         3. User Agent String: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0`
 
     2. Name: `[Screenshot] Web - Landscape`
-
         1. Size: `1196`x`671`
 
         2. Device Pixel Ratio: `1`
@@ -178,7 +172,6 @@ For creating screenshots with a consistent style, Firefox DevTools is to be used
         3. User Agent String: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0`
 
 4. Resulting screenshots will fit exactly within the 2px outside border present in the following screenshot templates:
-
     1. [Screenshot (Landscape)](images/templates/screenshot-landscape.png)
 
     2. [Screenshot (Portrait)](images/templates/screenshot-portrait.png)
@@ -190,21 +183,17 @@ For creating screenshots with a consistent style, Firefox DevTools is to be used
 For creating image annotations with a consistent style, follow these guidelines.
 
 1. Highlight box
-
     2. Use: Indicating an area of focus in an image.
 
     3. Style
-
         1. Padding: `2px` distance from highlighted selection
 
         2. Outline
-
             1. Width: `1px`
 
             2. Color: `#007FFF`
 
         3. Fill
-
             1. Color: `#FF7F00`
 
             2. Opacity: `0.5`
@@ -214,7 +203,6 @@ For creating image annotations with a consistent style, follow these guidelines.
         ![example](example){ loading=lazy }
 
     5. Naming convention: For images with highlights, append `-h-$highlightedFeature`
-
         1. Example: `login.png` → `login-h-forgot-password.png`
 
 #### QR Codes
