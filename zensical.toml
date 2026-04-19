@@ -19,7 +19,7 @@ site_author = "Lumikeiju"
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-site_url = "https://Lumikeiju.github.io/silmarin/"
+site_url = "https://lumikeiju.dev/silmarin/"
 
 repo_name = "Lumikeiju/Silmärin"
 repo_url = "https://github.com/Lumikeiju/silmarin"
