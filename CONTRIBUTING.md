@@ -91,7 +91,7 @@ This section of the guide explains how to set up a Windows environment for contr
 2. Clone the repository
 
     ```powershell
-    git clone https://github.com/Lumikeiju/silmarin
+    git clone https://github.com/lumikeiju/silmarin
     cd silmarin
     ```
 
