@@ -1,13 +1,14 @@
 <!-- @format -->
 
-# OSM US Pedestrian Working Group
+# OSM US PWG
 
-A repository hosting resources related to the OpenStreetMap US Pedestrian Working Group.
+Resources for the OpenStreetMap US Pedestrian Working Group, including JOSM presets, Ultra visualizations, and an archive of PWG documents.
 
+- **Website**: [lumikeiju.dev/osm-us-pwg](https://lumikeiju.dev/osm-us-pwg) (coming soon)
 - **Repository**: [github.com/lumikeiju/osm-us-pwg](https://github.com/lumikeiju/osm-us-pwg)
 
 ## Contents
 
-- **JOSM presets** for pedestrian-focused tagging
-- **Ultra visualizations**
-- **Archived PWG artifacts**
+- JOSM presets
+- Ultra visualizations
+- Archived Pedestrian Working Group documents

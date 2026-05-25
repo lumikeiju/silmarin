@@ -2,13 +2,14 @@
 
 # ArkkiSnappi
 
-A JOSM plugin that accelerates building-mapping in OpenStreetMap.
+JOSM plugin for mapping in OpenStreetMap with a 2-axis snap grid and extrusion workflow.
 
+- **Website**: [lumikeiju.dev/arkki-snappi](https://lumikeiju.dev/arkki-snappi) (coming soon)
 - **Repository**: [github.com/lumikeiju/arkki-snappi](https://github.com/lumikeiju/arkki-snappi)
 
 ## Overview
 
-ArkkiSnappi blends and expands on the workflows of _BuildingsTools_ and _Extrude_, making it easier to accurately map buildings.
+ArkkiSnappi is a JOSM plugin for OpenStreetMap editing, centered on a 2-axis snap grid and an extrusion workflow.
 
 ## Features
 

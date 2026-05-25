@@ -2,26 +2,12 @@
 
 # Silmärin
 
-## [Arkki Snappi](arkki-snappi.md)
+Library for documentation of my projects.
 
-A JOSM plugin for quick, accurate building footprint mapping with a 2-axis snap grid
+## [Projects](projects/index.md)
 
-## [Improve Node](improve-node.md)
+Project documentation based on the verified catalogue at [lumikeiju.dev](https://lumikeiju.dev/).
 
-A JOSM plugin for efficiently improving the position of isolated nodes
+## [Config](config/index.md)
 
-## [OpenStreetMap](openstreetmap.md)
-
-A personal collection of guides and JOSM resources for OpenStreetMap
-
-## [OSM US Pedestrian Working Group](osm-us-pwg.md)
-
-Resources, presets, and visualizations related to the OpenStreetMap US Pedestrian Working Group
-
-## [Pride Map](pride-map.md)
-
-An interactive map visualizing LGBTQ+-friendliness data in OpenStreetMap
-
-## [Sidewalk Spider](sidewalk-spider.md)
-
-A web tool for associating sidewalks and crossings with streets in OpenStreetMap
+Configuration notes and system setup references.
