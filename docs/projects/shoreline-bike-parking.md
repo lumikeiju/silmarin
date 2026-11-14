@@ -2,11 +2,12 @@
 
 # Shoreline Bike Parking
 
-Archive data repository holding the Shoreline, WA, US bike parking dataset provided by the City of Shoreline with explicit permission for OSM import.
+Archived, unmodified copy of the City of Shoreline, WA, US bike parking dataset, provided with explicit permission for OpenStreetMap import.
 
-- **Website**: [lumikeiju.dev/shoreline-bike-parking](https://lumikeiju.dev/shoreline-bike-parking) (coming soon)
+- **Website**: [lumikeiju.dev/shoreline-bike-parking](https://lumikeiju.dev/shoreline-bike-parking/)
 - **Repository**: [github.com/lumikeiju/shoreline-bike-parking](https://github.com/lumikeiju/shoreline-bike-parking)
 
-## Overview
+## Contents
 
-Shoreline Bike Parking preserves the City of Shoreline bike parking dataset with explicit permission for import into OpenStreetMap.
+- Original dataset ZIP and accompanying disclaimer
+- [OSM import permission documentation](https://wiki.openstreetmap.org/wiki/Contributors#City_of_Shoreline,_Washington)

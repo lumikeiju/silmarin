@@ -17,7 +17,6 @@ Examples:
   python process-screenshot.py path/to/images/*.png --output-dir ./processed
   python process-screenshot.py crop.png --variants light --border-width 3
   python process-screenshot.py docs/resources/images/ --recurse
-  python process-screenshot.py screenshot.png --profile uw-purple
 
 Run with --help for full options.
 """

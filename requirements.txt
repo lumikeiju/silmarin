@@ -1,2 +1,2 @@
-zensical
-pillow
+zensical==0.1.1
+pillow==13.0.0

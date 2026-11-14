@@ -6,7 +6,7 @@ Library for documentation of my projects.
 
 ## [Projects](projects/index.md)
 
-Project documentation based on the verified catalogue at [lumikeiju.dev](https://lumikeiju.dev/).
+User manuals and reference material for my [public projects on GitHub](https://github.com/lumikeiju?tab=repositories).
 
 ## [Config](config/index.md)
 
