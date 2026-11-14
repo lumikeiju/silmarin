@@ -2,38 +2,40 @@
 
 # Projects
 
+User manuals and reference material for my public GitHub projects. Detailed coverage starts with Orcaboros; the other entries currently provide project overviews.
+
+## [lumikeiju.dev](lumikeiju-dev.md)
+
+Astro-based personal website, project index, and host for project mini-pages.
+
 ## [Silmärin](silmarin.md)
 
-Library for documentation of my projects.
+Library for documentation of my projects, built with Zensical.
 
-## [ArkkiSnappi](arkki-snappi.md)
+## [Saarelai](saarelai.md)
 
-JOSM plugin for mapping in OpenStreetMap with a 2-axis snap grid and extrusion workflow.
+JOSM plugins, tagging presets, MapCSS paint styles, and validator rules, maintained and versioned independently.
+
+## [Orcaboros](orcaboros/index.md)
+
+Browser-based tool for comparing GTFS transit stops with OpenStreetMap and preparing reviewed changes for JOSM.
 
 ## [Pride Map](pride-map.md)
 
 Ultra-powered visualization of LGBTQ+-friendliness data in OpenStreetMap.
 
-## [Sidewalk Spider](sidewalk-spider.md)
-
-Web-based editor for associating sidewalks and streets in OpenStreetMap.
-
 ## [OSM US PWG](osm-us-pwg.md)
 
-Resources for the OpenStreetMap US Pedestrian Working Group, including JOSM presets, Ultra visualizations, and an archive of PWG documents.
-
-## [ImproveNode](improve-node.md)
-
-JOSM plugin for efficiently improving the positional accuracy of standalone nodes.
+Semi-official resources for the OpenStreetMap US Pedestrian Working Group, including its tagging schema, JOSM tooling, Ultra visualizations, and document archive.
 
 ## [OpenStreetMap](openstreetmap.md)
 
-Personal collection of OpenStreetMap resources including JOSM presets, validators, MapCSS styles, Overpass queries, and custom icons.
+Collection of OpenStreetMap mapping resources: JOSM presets and validators, MapCSS styles, Ultra visualizations, queries, guides, and icons.
 
-## [Kielisilta](kielisilta.md)
+## [Tarralappu](tarralappu.md)
 
-Web utility for translating existing geospatial data into OSM-ready formats with custom field mapping and reprojection.
+Sticky-note-themed browser interface for AI image generation through OpenRouter.
 
 ## [Shoreline Bike Parking](shoreline-bike-parking.md)
 
-Archive data repository holding the Shoreline, WA, US bike parking dataset provided by the City of Shoreline with explicit permission for OSM import.
+Archived, unmodified copy of the City of Shoreline, WA, US bike parking dataset, provided with explicit permission for OpenStreetMap import.

@@ -30,7 +30,7 @@ Silmärin uses [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH):
     - Core: Minor fixes, fixing typos, completing chores
     - Docs: Small updates, fixing typos, adding images
 
-The version number is stored in the `CHANGELOG.md` file.
+The version number is the latest `## vMAJOR.MINOR.PATCH (YYYY-MM-DD)` heading in the `CHANGELOG.md` file.
 
 ### Conventional Commits
 
@@ -67,8 +67,17 @@ fix/fix-typo
 
 1. Create a feature branch following the naming convention
 2. Make commits using conventional commit format
-3. Open a pull request to `main`
-4. Upon merge to `main`, releases are automated
+3. Open a pull request to `main`; [CI](.github/workflows/ci.yml) builds it without deploying
+4. Merge the reviewed changes and their [CHANGELOG.md](CHANGELOG.md) release entry into `main`
+
+### Releases
+
+`main` contains source. [Promote site](.github/workflows/promote.yml) alone manages artifact-only `beta`/`stable` branches; never merge source into them.
+
+1. Run **Promote site** from **main**, action **beta**. Test the prerelease's attached site ZIP under `/silmarin/`; `beta` is not a second Pages site.
+2. Run it from **main**, action **stable**, with the exact tested `v<version>-beta.<run>.<attempt>` tag and explicit confirmation.
+
+Promotion requires the current `beta` branch to match the candidate. It publishes the same files to `stable` without rebuilding, verifies the Pages build, then creates `v<version>`. Existing stable tags are never replaced.
 
 ## Getting Started (Windows 10/11)
 
@@ -95,13 +104,13 @@ This section of the guide explains how to set up a Windows environment for contr
     cd silmarin
     ```
 
-3. Install [Python](https://www.python.org/downloads/)
+3. Install [Python](https://www.python.org/downloads/) 3.11 or newer. Both pinned dependencies require at least Python 3.11.
 
 4. Set up Python virtual environment
     1. Create the virtual environment
 
         ```powershell
-        python3 -m venv .venv
+        python -m venv .venv
         ```
 
     2. Activate the virtual environment
@@ -113,8 +122,27 @@ This section of the guide explains how to set up a Windows environment for contr
 5. Install requirements
 
     ```powershell
-    pip install -r requirements.txt
+    .\.venv\Scripts\Activate.ps1
+    python -m pip install -r requirements.txt
     ```
+
+### Updating Dependencies and Previewing
+
+Direct dependencies are pinned in [requirements.txt](requirements.txt). Update the pins to newer stable releases before installing upgrades. Local development and CI both install this manifest.
+
+Check the interpreter with `python --version` after activation. If the existing environment uses Python older than 3.11 or points to a removed installation, stop the dev server, deactivate the environment if active, and move the old `.venv` aside. Create a fresh `.venv` using a supported interpreter before installing the requirements.
+
+From the repository root, install the updates and validate the site:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade --upgrade-strategy eager -r requirements.txt
+python -m pip check
+zensical build --clean
+zensical serve
+```
+
+Open the local URL printed by `zensical serve`. Stop the server with `Ctrl+C` when finished.
 
 ## Editing Instructions
 
@@ -136,7 +164,7 @@ Refer to [Zensical: Images](https://zensical.org/docs/authoring/images/) for mor
 
 #### Screenshots
 
-For creating screenshots with a consistent style, Firefox DevTools is to be used.
+Firefox DevTools is the standard workflow for creating screenshots with a consistent style. Existing project images and explicitly approved shared-browser captures may retain their native dimensions or be cropped to the relevant panel. Verify the actual CSS viewport and device pixel ratio; do not stretch an image or pad it to imitate the preferred viewport sizes below.
 
 1. Open Firefox DevTools
 
@@ -161,16 +189,19 @@ For creating screenshots with a consistent style, Firefox DevTools is to be used
 
         3. User Agent String: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0`
 
-3. It is recommended to remove all embedded metadata, such as with the use of [ExifToolGUI](https://exiftool.org/gui/).
+4. It is recommended to remove all embedded metadata, such as with the use of [ExifToolGUI](https://exiftool.org/gui/).
 
-4. Process screenshots with the `process-screenshot.py` utility to generate themed light/dark variants with borders and drop shadows:
+5. Process screenshots with the `process-screenshot.py` utility to generate themed light/dark variants with borders and drop shadows:
 
     ```powershell
     # Ensure venv is activated first!
-    ..\.venv\Scripts\Activate.ps1
+    .\.venv\Scripts\Activate.ps1
 
     # Process a single screenshot
     python .\utilities\process-screenshot.py docs\resources\images\example\screenshot.png
+
+    # Publish variants from git-ignored raw captures without publishing the originals
+    python .\utilities\process-screenshot.py local-storage\screenshots\ --output-dir docs\resources\images\example\
 
     # Process all images in a directory
     python .\utilities\process-screenshot.py docs\resources\images\example\
@@ -195,6 +226,7 @@ For creating screenshots with a consistent style, Firefox DevTools is to be used
 
     Mode-tagged source files (e.g., `image.light.png`, `image.dark.png`) generate only the matching variant. Run with `--help` for all options including per-variant color/shadow overrides.
 
+    Add descriptive alt text and captions. Clearly identify fictional demonstration data and record the source/version of reused project screenshots.
 
 #### QR Codes
 

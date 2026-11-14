@@ -2,11 +2,13 @@
 
 # Silmärin
 
-Library for documentation of my projects.
+Library for documentation of my projects, built with Zensical.
 
-- **Website**: [lumikeiju.dev/silmarin](https://lumikeiju.dev/silmarin)
+- **Website**: [lumikeiju.dev/silmarin](https://lumikeiju.dev/silmarin/)
 - **Repository**: [github.com/lumikeiju/silmarin](https://github.com/lumikeiju/silmarin)
 
-## Overview
+## Contents
 
-Silmärin is the documentation library for Lumikeiju's projects.
+- [Project manuals and overviews](index.md)
+- [Illustrated Orcaboros user manual](orcaboros/index.md)
+- [Configuration notes](../config/index.md)
