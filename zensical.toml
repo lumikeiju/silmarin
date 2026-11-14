@@ -112,6 +112,9 @@ combine_header_slug = true
 custom_checkbox = true
 [project.markdown_extensions.pymdownx.tilde]
 
+[project.plugins.glightbox]
+auto_themed = true
+
 #region Extras
 [[project.extra.social]]
 name = "Lumikeiju on GitHub"

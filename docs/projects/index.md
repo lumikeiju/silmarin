@@ -2,7 +2,7 @@
 
 # Projects
 
-User manuals and reference material for my public GitHub projects. Detailed coverage starts with Orcaboros; the other entries currently provide project overviews.
+User manuals and reference material for my public GitHub projects. Orcaboros and Tarralappu have detailed manuals; the other entries currently provide project overviews.
 
 ## [lumikeiju.dev](lumikeiju-dev.md)
 
@@ -34,7 +34,7 @@ Collection of OpenStreetMap mapping resources: JOSM presets and validators, MapC
 
 ## [Tarralappu](tarralappu.md)
 
-Sticky-note-themed browser interface for AI image generation through OpenRouter.
+Sticky-note-themed browser interface for AI image generation through OpenRouter, with a guide to prompts, references, sketches, media, and costs.
 
 ## [Shoreline Bike Parking](shoreline-bike-parking.md)
 

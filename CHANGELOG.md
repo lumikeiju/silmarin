@@ -6,6 +6,14 @@ Changes to Silmärin are documented here.
 
 This project adheres to [Semantic Versioning](https://semver.org/) and [Conventional Commits](https://www.conventionalcommits.org/).
 
+## v2.1.0 (2026-11-14)
+
+### Features
+
+- Add an illustrated Tarralappu v2.1.0 manual covering setup, prompts, models, generation, references, refinements, media, costs, and troubleshooting.
+- Update the project catalogue to link readers to the detailed Tarralappu guide.
+- Enable GLightbox for enlarging documentation images, with separate galleries for light and dark themes.
+
 ## v2.0.0 (2026-10-31)
 
 ### Features
